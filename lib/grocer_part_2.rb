@@ -7,7 +7,7 @@ def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   cart.each_with_object([]){|grocery, new_list|
     coupons.each {|coupon_list|
-      if grocery[:item] == coupon_list[:item]
+      if grocery[:item] == coupon_list[:item] && grocery[:count] >= coupon_list[:num]
         binding.pry
         if grocery[:count]>=coupon_list[:num]
          new_list[:item] = grocery[:item] + "W/COUPON"
