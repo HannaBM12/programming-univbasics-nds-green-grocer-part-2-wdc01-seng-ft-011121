@@ -32,6 +32,7 @@ def apply_clearance(cart)
   # REMEMBER: This method **should** update cart
   cart.each {|item|
     if item[:clearance] == true
+      binding.pry
       item[:price] == (0.8 * item[:price]).round(2)
     end
   }
