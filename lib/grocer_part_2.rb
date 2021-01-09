@@ -5,7 +5,7 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  new_list = {}
+  new_list = Hash.new(0)
   cart.each {|grocery|
     coupons.each {|coupon_list|
       if grocery[:item] == coupon_list[:item] && grocery[:count] >= coupon_list[:num]
