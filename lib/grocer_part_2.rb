@@ -6,7 +6,7 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   cart.each_with_object({}){|items, new_list|
-    binding.prySß
+    binding.pry
   }
 end
 
