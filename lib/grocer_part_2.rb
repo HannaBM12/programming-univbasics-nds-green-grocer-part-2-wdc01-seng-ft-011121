@@ -16,7 +16,7 @@ def apply_coupons(cart, coupons)
          new_list[:count] = coupon_list[:num]
          cart  << new_list
       end
-    endß
+    end
     }
 
   }
