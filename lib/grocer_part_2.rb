@@ -13,7 +13,7 @@ def apply_coupons(cart, coupons)
          new_list[:price] = coupon_list[:cost]/coupon_list[:num]
          new_list[:clearnce] = grocery[:clearance]
          new_list[:count] = coupon_list[:num]
-         binding.pry
+        #  binding.pry
          cart  << new_list
        end
       }
