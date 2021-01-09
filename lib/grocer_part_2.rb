@@ -49,4 +49,17 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+  consolidated = consolidate_cart(cart)
+  apply_coupons_cart = apply_coupons(consolidated, coupons)
+  apply_clearance_cart = apply_clearance(apply_coupons_cart)
+
+  total = 0
+  apply_clearance_cart.each { |items|
+    total += items[:price] * items[:count]
+  }
+  if total <= 100
+    return total
+  else
+    return 0.9 * total
+
 end
