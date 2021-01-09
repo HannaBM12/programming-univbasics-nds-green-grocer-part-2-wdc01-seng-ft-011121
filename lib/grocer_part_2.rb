@@ -15,7 +15,7 @@ def apply_coupons(cart, coupons)
         new_list[:clearnce] = grocery[:clearance]
         new_list[:count] = coupon_list[:num]
         cart << new_list
-        binding.pry
+        binding.pryß
       end
       }
   binding.pry
