@@ -8,7 +8,7 @@ def apply_coupons(cart, coupons)
   cart.each_with_object({}){|items, new_list|
     couponsea
 
-    
+
     binding.pry
   }
 end
