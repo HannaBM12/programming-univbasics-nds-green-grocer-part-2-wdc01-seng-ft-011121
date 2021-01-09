@@ -19,6 +19,7 @@ def apply_coupons(cart, coupons)
         break
         # binding.pry
       end
+    end
       }
   # binding.pry
 }
