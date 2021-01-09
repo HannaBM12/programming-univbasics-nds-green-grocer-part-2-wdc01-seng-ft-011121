@@ -8,6 +8,7 @@ def apply_coupons(cart, coupons)
   new_list = Hash.new(0)
   cart.each {|grocery|
     coupons.each {|coupon_list|
+      if grocery[:item] == coupon_list[:item]
       if grocery[:item] == coupon_list[:item] && grocery[:count] >= coupon_list[:num]
         grocery[:count] -= coupon_list[:num]
         new_list[:item] = grocery[:item] + " W/COUPON"
