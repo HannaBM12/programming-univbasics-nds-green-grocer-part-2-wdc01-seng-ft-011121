@@ -8,13 +8,15 @@ def apply_coupons(cart, coupons)
   cart.each_with_object([]){|grocery, new_list|
     coupons.each {|coupon_list|
       binding.pry
-      if grocery[:item] == coupon_list[:item] && grocery[:count]>=coupon_list[:num]
+      if grocery[:item] == coupon_list[:item]
+        if grocery[:count]>=coupon_list[:num]
          new_list[:item] = grocery[:item] + "W/COUPON"
          new_list[:price] = coupon_list[:cost]/coupon_list[:num]
          new_list[:clearnce] = grocery[:clearance]
          new_list[:count] = coupon_list[:num]
          cart  << new_list
       end
+    endß
     }
 
   }
