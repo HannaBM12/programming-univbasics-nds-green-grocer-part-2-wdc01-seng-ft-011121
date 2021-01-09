@@ -1,9 +1,13 @@
 require_relative './part_1_solution.rb'
+require 'pry'
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  cart.each_with_object({}){|items, new_list|
+    binding.prySß
+  }
 end
 
 def apply_clearance(cart)
